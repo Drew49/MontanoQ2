@@ -39,10 +39,11 @@ namespace TShirtOrders
         }
         private static void DisplayTotal(List<TShirtOrder> orders)
         {
+            TShirtOrder st = new TShirtOrder();
             decimal total = 0;
             foreach (TShirtOrder order in orders) //AM. Changed string to TShirtOrder
             { 
-                total += orders.Price; //AM. Could not figure this one out.
+                total += st.Price; //AM. Could not figure this one out.
             }
             Console.WriteLine("Total price of order is: " + total);
         }

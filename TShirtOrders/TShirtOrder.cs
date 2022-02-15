@@ -21,7 +21,7 @@ namespace TShirtOrders
             this.printAreaInSqIn = printAreaInSqIn;
             this.numColors = numColors;
             this.numShirts = numShirts;
-            Calc();
+            
         }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -48,7 +48,7 @@ namespace TShirtOrders
             get { return numShirts; }
             set { numShirts = value; Calc(); }
         }
-        public decimal Price { private get; set; }
+        public decimal Price { get; private set; }
         private void Calc()
         {
             Price = (decimal)(numShirts * (numColors * 2.25 + printAreaInSqIn * .05)); //AM. Added deciaml to convert the int and double to a float.
