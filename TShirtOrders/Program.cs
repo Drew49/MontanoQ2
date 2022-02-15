@@ -42,7 +42,7 @@ namespace TShirtOrders
             decimal total = 0;
             foreach (TShirtOrder order in orders) //AM. Changed string to TShirtOrder
             { 
-                total += orders.Count; //AM. Could not figure this one out.
+                total += orders.Price; //AM. Could not figure this one out.
             }
             Console.WriteLine("Total price of order is: " + total);
         }
